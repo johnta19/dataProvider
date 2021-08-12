@@ -5,10 +5,11 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
 
+import base.test.BaseTestWithoutLogin;
 import ui.tests.chooseProductFromMainPage;
 import ui.tests.chooseProductWithSearchField;
 import ui.tests.loginTest;
-import base.test.baseTest;
+import base.test.baseTestWIthLogIn;
 
 
 public class ConfigProperties {
@@ -29,7 +30,8 @@ public class ConfigProperties {
             loginTest.browserName = browser;
             chooseProductFromMainPage.browserName = browser;
             chooseProductWithSearchField.browserName = browser;
-//            baseTest.browserName = browser;
+            baseTestWIthLogIn.browserName = browser;
+            BaseTestWithoutLogin.browserName = browser;
         } catch (Exception  e) {
             System.out.println(e.getMessage());
             System.out.println(e.getCause());

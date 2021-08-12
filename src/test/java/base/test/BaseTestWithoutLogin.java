@@ -8,18 +8,17 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 import properties.ConfigProperties;
 
 import java.util.concurrent.TimeUnit;
 
 
-public class baseTest {
+public class BaseTestWithoutLogin {
     private WebDriver driver;
     private WebDriverWait wait;
+    private HomePage homePage;
+    private LoginPage loginPage;
     public static String browserName;
     private String url = "http://automationpractice.com/";
 
@@ -43,7 +42,7 @@ public class baseTest {
 
     }
 
-        @BeforeTest
+    @BeforeTest
     public void goToUrl() {
         driver.get(url);
         driver.manage().window().maximize();
