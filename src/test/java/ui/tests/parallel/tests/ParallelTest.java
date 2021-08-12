@@ -1,4 +1,4 @@
-package ui.tests.parallelTests;
+package ui.tests.parallel.tests;
 
 import base.test.BaseTestWIthLogIn;
 import business.layer.pages.HomePage;

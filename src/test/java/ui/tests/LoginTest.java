@@ -6,6 +6,7 @@ import business.layer.pages.LoginPage;
 import data.providers.LoginDataProvider;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
+import steps.BayerSteps;
 
 
 public class LoginTest extends BaseTestWithoutLogin {

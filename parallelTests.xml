@@ -6,8 +6,8 @@
     </listeners>
     <test name="selenium-java" parallel="classes" thread-count="2">
         <classes>
-            <class name="ui.tests.parallelTests.ParallelTest"/>
-            <class name="ui.tests.parallelTests.ParallelTest2"/>
+            <class name="ui.tests.parallel.tests.ParallelTest"/>
+            <class name="ui.tests.parallel.tests.ParallelTest2"/>
         </classes>
     </test>
 </suite>

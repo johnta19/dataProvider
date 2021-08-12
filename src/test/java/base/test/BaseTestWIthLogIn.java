@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 
 public class BaseTestWIthLogIn {
-    private WebDriver driver;
+    private static WebDriver driver;
     private HomePage homePage;
     private LoginPage loginPage;
     public static String browserName;
@@ -61,7 +61,7 @@ public class BaseTestWIthLogIn {
         driver.quit();
     }
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
 
         return driver;
     }

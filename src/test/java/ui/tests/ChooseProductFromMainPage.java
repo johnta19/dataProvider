@@ -3,22 +3,17 @@ package ui.tests;
 import base.test.BaseTestWIthLogIn;
 import business.layer.pages.HomePage;
 import org.testng.annotations.Test;
+import steps.BayerSteps;
 
 public class ChooseProductFromMainPage extends BaseTestWIthLogIn {
 
-    HomePage homePage;
-
     @Test
-    public void addPrintedDress() {
-        homePage = new HomePage(getDriver());
-        homePage.goToMainPage();
-        homePage.clickOnPrintedDress();
+    public void choosePrintedDress() {
+        BayerSteps.choosePrintedDressOnMainPage();
     }
 
     @Test
-    public void addPrintedSummerDress() {
-        homePage = new HomePage(getDriver());
-        homePage.goToMainPage();
-        homePage.clickOnPrintedSummerDress();
+    public void choosePrintedSummerDress() {
+        BayerSteps.choosePrintedSummerDressOnMainPage();
     }
 }

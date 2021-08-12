@@ -20,12 +20,13 @@ public class LoginPage extends BasePage {
     @FindBy(id = "SubmitLogin")
     private WebElement submitLogin;
 
-    public void logIn(String email, String password) {
+    public HomePage logIn(String email, String password) {
         waitForElementToBeClickable(login);
         login.sendKeys(email);
         waitForElementToBeClickable(pass);
         pass.sendKeys(password);
         waitForElementToBeClickable(submitLogin);
         submitLogin.click();
+        return new HomePage(driver);
     }
 }

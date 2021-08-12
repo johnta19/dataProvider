@@ -12,6 +12,7 @@ import java.io.IOException;
 public class HomePage extends BasePage {
 
     ReadFileToString readFileToString = new ReadFileToString();
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -34,39 +35,43 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[@id=\"homefeatured\"]/li[5]/div/div[2]/h5/a")
     private WebElement printedSummerDress;
 
-
-
-    public void clickLoginButton() {
+    public LoginPage clickLoginButton() {
         waitForElementToBeClickable(loginButton);
         loginButton.click();
+        return new LoginPage(driver);
     }
 
-    public void clickLogoutButton() {
+    public HomePage clickLogoutButton() {
         waitForElementToBeClickable(logOutButton);
         logOutButton.click();
+        return new HomePage(driver);
     }
 
-    public void inputSearchField(String item) {
+    public HomePage inputSearchField(String item) {
         waitForElementToBeClickable(searchField);
         searchField.sendKeys(item, Keys.ENTER);
+        return new HomePage(driver);
     }
 
-    public void goToMainPage() {
+    public HomePage goToMainPage() {
         waitForElementToBeClickable(mainPage);
         mainPage.click();
+        return new HomePage(driver);
     }
 
-    public void clickOnPrintedDress() {
+    public HomePage clickOnPrintedDress() {
         waitForElementToBeClickable(printedDress);
         printedDress.click();
+        return new HomePage(driver);
     }
 
-    public void clickOnPrintedSummerDress() {
+    public HomePage clickOnPrintedSummerDress() {
         waitForElementToBeClickable(printedSummerDress);
         printedDress.click();
+        return new HomePage(driver);
     }
 
-    public void inputSearchFieldFromFile() {
+    public HomePage inputSearchFieldFromFile() {
         String str;
         try {
             str = readFileToString.readFile();
@@ -75,7 +80,7 @@ public class HomePage extends BasePage {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        return new HomePage(driver);
     }
 
 }
