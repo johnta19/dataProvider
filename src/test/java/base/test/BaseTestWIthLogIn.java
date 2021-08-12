@@ -14,12 +14,14 @@ import properties.ConfigProperties;
 import java.util.concurrent.TimeUnit;
 
 
-public class baseTestWIthLogIn {
+public class BaseTestWIthLogIn {
     private WebDriver driver;
     private WebDriverWait wait;
     private HomePage homePage;
     private LoginPage loginPage;
     public static String browserName;
+    public static String login;
+    public static String password;
     private String url = "http://automationpractice.com/";
 
     @BeforeSuite
@@ -39,7 +41,8 @@ public class baseTestWIthLogIn {
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 20);
-
+        homePage = new HomePage(driver, wait);
+        loginPage = new LoginPage(driver, wait);
     }
 
         @BeforeTest
@@ -50,14 +53,11 @@ public class baseTestWIthLogIn {
 
     @BeforeClass
     public void logIn() {
-        homePage = new HomePage(getDriver(), getWait());
-        loginPage = new LoginPage(getDriver(), getWait());
         homePage.clickLoginButton();
-        loginPage.logIn("test123333@test.com", "test123333");
+        loginPage.logIn(login, password);
     }
     @AfterClass
-    public void logOoout() {
-        homePage = new HomePage(getDriver(), getWait());
+    public void logOut() {
         homePage.clickLogoutButton();
     }
     @AfterTest
@@ -66,6 +66,7 @@ public class baseTestWIthLogIn {
     }
 
     public WebDriver getDriver() {
+
         return driver;
     }
 

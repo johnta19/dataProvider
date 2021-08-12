@@ -1,10 +1,10 @@
 package ui.tests;
 
-import base.test.baseTestWIthLogIn;
+import base.test.BaseTestWIthLogIn;
 import business.layer.pages.HomePage;
 import org.testng.annotations.Test;
 
-public class chooseProductFromMainPage extends baseTestWIthLogIn {
+public class ChooseProductFromMainPage extends BaseTestWIthLogIn {
 
     HomePage homePage;
 

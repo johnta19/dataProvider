@@ -8,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 
-public class loginTest extends BaseTestWithoutLogin {
+public class LoginTest extends BaseTestWithoutLogin {
 
     HomePage homePage;
     LoginPage loginPage;

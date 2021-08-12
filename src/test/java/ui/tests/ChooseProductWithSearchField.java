@@ -1,12 +1,12 @@
 package ui.tests;
 
-import base.test.baseTestWIthLogIn;
+import base.test.BaseTestWIthLogIn;
 import business.layer.pages.HomePage;
 import data.providers.ChooseDressWIthSearchFieldDataProvider;
 import data.providers.ChooseShirtsWithSearchFieldDataProvider;
 import org.testng.annotations.Test;
 
-public class chooseProductWithSearchField extends baseTestWIthLogIn {
+public class ChooseProductWithSearchField extends BaseTestWIthLogIn {
 
     HomePage homePage;
 

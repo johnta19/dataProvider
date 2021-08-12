@@ -6,7 +6,7 @@
     </listeners>
     <test name="selenium-java2">
         <classes>
-            <class name="ui.tests.chooseProductWithSearchField"/>
+            <class name="ui.tests.ChooseProductWithSearchField"/>
         </classes>
     </test>
 </suite>

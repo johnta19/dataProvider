@@ -4,7 +4,7 @@
 
     <suite-files>
         <suite-file path="./chooseProductWithSearchField.xml"></suite-file>
-        <suite-file path="./chooseProductWithSearchFieldAndMainPage.xml"></suite-file>
+        <suite-file path="parallelTests.xml"></suite-file>
         <suite-file path="./login.xml"></suite-file>
     </suite-files>
 
