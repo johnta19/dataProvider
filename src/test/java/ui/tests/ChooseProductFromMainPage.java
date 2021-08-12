@@ -10,14 +10,14 @@ public class ChooseProductFromMainPage extends BaseTestWIthLogIn {
 
     @Test
     public void addPrintedDress() {
-        homePage = new HomePage(getDriver(), getWait());
+        homePage = new HomePage(getDriver());
         homePage.goToMainPage();
         homePage.clickOnPrintedDress();
     }
 
     @Test
     public void addPrintedSummerDress() {
-        homePage = new HomePage(getDriver(), getWait());
+        homePage = new HomePage(getDriver());
         homePage.goToMainPage();
         homePage.clickOnPrintedSummerDress();
     }

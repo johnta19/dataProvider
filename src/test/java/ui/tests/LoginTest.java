@@ -15,14 +15,14 @@ public class LoginTest extends BaseTestWithoutLogin {
 
     @AfterClass
     public void logOut() {
-        homePage = new HomePage(getDriver(), getWait());
+        homePage = new HomePage(getDriver());
         homePage.clickLogoutButton();
     }
 
     @Test(dataProvider = "correctIncorrectLogin", dataProviderClass = LoginDataProvider.class)
     public void loginTest(String email, String pass) {
-        homePage = new HomePage(getDriver(), getWait());
-        loginPage = new LoginPage(getDriver(), getWait());
+        homePage = new HomePage(getDriver());
+        loginPage = new LoginPage(getDriver());
         homePage.clickLoginButton();
         loginPage.logIn(email, pass);
     }

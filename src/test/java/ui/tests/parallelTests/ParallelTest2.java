@@ -1,6 +1,5 @@
 package ui.tests.parallelTests;
 
-import base.test.BaseTestWIthLogIn;
 import business.layer.pages.HomePage;
 import business.layer.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -41,8 +40,8 @@ public class ParallelTest2 {
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 20);
-        homePage = new HomePage(driver, wait);
-        loginPage = new LoginPage(driver, wait);
+        homePage = new HomePage(driver);
+        loginPage = new LoginPage(driver);
     }
 
     @BeforeTest
@@ -53,7 +52,6 @@ public class ParallelTest2 {
 
     @BeforeClass
     public void logIn() {
-
         homePage.clickLoginButton();
         loginPage.logIn(login, password);
     }

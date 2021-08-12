@@ -1,14 +1,11 @@
 package properties;
 
-
 import base.test.BaseTestWIthLogIn;
 import base.test.BaseTestWithoutLogin;
 import ui.tests.parallelTests.ParallelTest2;
-
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
-
 
 public class ConfigProperties {
 

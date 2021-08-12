@@ -4,10 +4,8 @@ import business.layer.pages.HomePage;
 import business.layer.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import properties.ConfigProperties;
 
@@ -16,7 +14,6 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTestWIthLogIn {
     private WebDriver driver;
-    private WebDriverWait wait;
     private HomePage homePage;
     private LoginPage loginPage;
     public static String browserName;
@@ -40,9 +37,8 @@ public class BaseTestWIthLogIn {
             driver = new FirefoxDriver();
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, 20);
-        homePage = new HomePage(driver, wait);
-        loginPage = new LoginPage(driver, wait);
+        homePage = new HomePage(driver);
+        loginPage = new LoginPage(driver);
     }
 
         @BeforeTest
@@ -70,7 +66,4 @@ public class BaseTestWIthLogIn {
         return driver;
     }
 
-    public WebDriverWait getWait() {
-        return wait;
-    }
 }

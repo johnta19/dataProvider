@@ -8,7 +8,7 @@ public class ParallelTest extends BaseTestWIthLogIn {
 
     @Test
     public void addPrintedSummerDress() {
-        HomePage homePage = new HomePage(getDriver(), getWait());
+        HomePage homePage = new HomePage(getDriver());
         homePage.goToMainPage();
         homePage.clickOnPrintedSummerDress();
     }
