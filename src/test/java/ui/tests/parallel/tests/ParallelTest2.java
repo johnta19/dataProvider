@@ -2,6 +2,7 @@ package ui.tests.parallel.tests;
 
 import business.layer.pages.HomePage;
 import business.layer.pages.LoginPage;
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -65,6 +66,7 @@ public class ParallelTest2 {
     }
 
     @Test
+    @Description("Parallel Test  Choose printed dress from main page")
     public void addPrintedDress() {
         homePage.goToMainPage();
         homePage.clickOnPrintedDress();

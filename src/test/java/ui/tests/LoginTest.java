@@ -4,6 +4,7 @@ import base.test.BaseTestWithoutLogin;
 import business.layer.pages.HomePage;
 import business.layer.pages.LoginPage;
 import data.providers.LoginDataProvider;
+import io.qameta.allure.Description;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import steps.BayerSteps;
@@ -21,6 +22,7 @@ public class LoginTest extends BaseTestWithoutLogin {
     }
 
     @Test(dataProvider = "correctIncorrectLogin", dataProviderClass = LoginDataProvider.class)
+    @Description("Login Test with wrong and write login, password")
     public void loginTest(String email, String pass) {
         homePage = new HomePage(getDriver());
         loginPage = new LoginPage(getDriver());
