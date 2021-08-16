@@ -3,6 +3,7 @@ package ui.tests.parallel.tests;
 import business.layer.pages.HomePage;
 import business.layer.pages.LoginPage;
 import io.qameta.allure.Description;
+import listeners.ListenersTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,6 +14,7 @@ import properties.ConfigProperties;
 
 import java.util.concurrent.TimeUnit;
 
+@Listeners({ListenersTest.class})
 public class ParallelTest2 {
 
     private WebDriver driver;

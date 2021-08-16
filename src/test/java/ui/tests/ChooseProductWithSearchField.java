@@ -4,9 +4,12 @@ import base.test.BaseTestWIthLogIn;
 import data.providers.ChooseDressWIthSearchFieldDataProvider;
 import data.providers.ChooseShirtsWithSearchFieldDataProvider;
 import io.qameta.allure.Description;
+import listeners.ListenersTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import steps.BayerSteps;
 
+@Listeners({ListenersTest.class})
 public class ChooseProductWithSearchField extends BaseTestWIthLogIn {
 
 

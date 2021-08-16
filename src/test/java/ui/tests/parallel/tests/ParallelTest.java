@@ -3,8 +3,10 @@ package ui.tests.parallel.tests;
 import base.test.BaseTestWIthLogIn;
 import business.layer.pages.HomePage;
 import io.qameta.allure.Description;
+import listeners.ListenersTest;
 import org.testng.annotations.*;
 
+@Listeners({ListenersTest.class})
 public class ParallelTest extends BaseTestWIthLogIn {
 
     @Test

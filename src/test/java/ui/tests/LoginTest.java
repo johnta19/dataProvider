@@ -5,11 +5,12 @@ import business.layer.pages.HomePage;
 import business.layer.pages.LoginPage;
 import data.providers.LoginDataProvider;
 import io.qameta.allure.Description;
+import listeners.ListenersTest;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import steps.BayerSteps;
 
-
+@Listeners({ListenersTest.class})
 public class LoginTest extends BaseTestWithoutLogin {
 
     HomePage homePage;
