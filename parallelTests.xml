@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="choose product with search filed and main page Suite">
+    <listeners>
+        <listener class-name="listeners.ListenersTest"/>
+    </listeners>
+    <test name="selenium-java" parallel="classes" thread-count="2">
+        <classes>
+            <class name="ui.tests.parallel.tests.ParallelTest"/>
+            <class name="ui.tests.parallel.tests.ParallelTest2"/>
+        </classes>
+    </test>
+</suite>
